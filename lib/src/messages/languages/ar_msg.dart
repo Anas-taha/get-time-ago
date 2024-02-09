@@ -14,7 +14,7 @@ class ArabicMessages extends Messages {
     if (seconds == 2) {
       return 'ثانيتين';
     }
-    return '${convertToUrduNumbers(seconds)} ثوان';
+    return '${convertToArabicNumbers(seconds)} ثوان';
   }
 
   @override
@@ -25,7 +25,7 @@ class ArabicMessages extends Messages {
     if (minutes == 2) {
       return 'دقيقتين';
     }
-    return '${convertToUrduNumbers(minutes)} دقائق';
+    return '${convertToArabicNumbers(minutes)} دقائق';
   }
 
   @override
@@ -36,7 +36,13 @@ class ArabicMessages extends Messages {
     if (hours == 2) {
       return 'ساعتين';
     }
-    return '${convertToUrduNumbers(hours)} ساعات';
+    if (hours == 1) {
+      return 'ساعة واحدة';
+    }
+    if (hours > 2 && hours < 11) {
+      return '${convertToArabicNumbers(hours)} ساعات';
+    }
+    return '${convertToArabicNumbers(hours)} ساعة';
   }
 
   @override
@@ -47,7 +53,7 @@ class ArabicMessages extends Messages {
     if (days == 2) {
       return 'يومين';
     }
-    return '${convertToUrduNumbers(days)} أيام';
+    return '${convertToArabicNumbers(days)} أيام';
   }
 
   @override

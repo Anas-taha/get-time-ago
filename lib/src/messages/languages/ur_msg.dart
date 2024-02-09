@@ -10,25 +10,25 @@ class UrduMessages extends Messages {
   String suffixAgo() => 'پہلے';
 
   @override
-  String secsAgo(int seconds) => '${convertToUrduNumbers(seconds)} سیکنڈ';
+  String secsAgo(int seconds) => '${convertToArabicNumbers(seconds)} سیکنڈ';
 
   @override
   String minAgo(int minutes) => 'ایک منٹ';
 
   @override
-  String minsAgo(int minutes) => '${convertToUrduNumbers(minutes)} منٹ';
+  String minsAgo(int minutes) => '${convertToArabicNumbers(minutes)} منٹ';
 
   @override
   String hourAgo(int minutes) => 'ایک گھنٹہ';
 
   @override
-  String hoursAgo(int hours) => '${convertToUrduNumbers(hours)} گھنٹے';
+  String hoursAgo(int hours) => '${convertToArabicNumbers(hours)} گھنٹے';
 
   @override
   String dayAgo(int hours) => 'ایک دن';
 
   @override
-  String daysAgo(int days) => '${convertToUrduNumbers(days)} دن';
+  String daysAgo(int days) => '${convertToArabicNumbers(days)} دن';
 
   @override
   String wordSeparator() => ' ';
