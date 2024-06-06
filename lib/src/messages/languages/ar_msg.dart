@@ -53,6 +53,9 @@ class ArabicMessages extends Messages {
     if (days == 2) {
       return 'يومين';
     }
+    if (days == 7) {
+      return 'أسبوع';
+    }
     return '${convertToArabicNumbers(days)} أيام';
   }
 

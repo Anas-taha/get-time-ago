@@ -27,7 +27,12 @@ class EnglishMessages implements Messages {
   String dayAgo(int hours) => 'a day';
 
   @override
-  String daysAgo(int days) => '$days days';
+  String daysAgo(int days) {
+    if (days == 7) {
+      return 'week';
+    }
+    return '$days days';
+  }
 
   @override
   String wordSeparator() => ' ';
